@@ -4,25 +4,25 @@ seqdiag {
  default_fontsize = 20;
  activation = none;
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.493525'
- '53833  >  3128 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1'] ", color = Green ]; 
+ '[SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.496139'
- '3128  >  53833 [SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128'] ", color = Green ]; 
+ '[SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.496273'
- '53833  >  3128 [ACK] Seq=1 Ack=1 Win=17408 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=1 Ack=1 Win=17408 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.498497'
  'CONNECT pagead2.googlesyndication.com:443 HTTP/1.0 '] ", color = Blue ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.500047'
- '3128  >  53833 [ACK] Seq=1 Ack=241 Win=15744 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=1 Ack=241 Win=15744 Len=0'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.506014'
  'HTTP/1.1 200 Connection established '] ", color = Blue ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.506099'
- '53833  >  3128 [ACK] Seq=241 Ack=40 Win=17408 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=241 Ack=40 Win=17408 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.510321'
  'Client Hello'] ", color = Blue ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.518012'
  'Server Hello Change Cipher Spec Hello Request Hello Request'] ", color = Blue ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.518061'
- '53833  >  3128 [ACK] Seq=471 Ack=187 Win=17152 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=471 Ack=187 Win=17152 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.518650'
  'Change Cipher Spec Hello Request Hello Request'] ", color = Blue ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.523410'
@@ -30,65 +30,65 @@ seqdiag {
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:45.523418'
  'Application Data'] ", color = Blue ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.526010'
- '3128  >  53833 [ACK] Seq=187 Ack=1982 Win=19712 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=187 Ack=1982 Win=19712 Len=0'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:45.565129'
- '3128  >  53833 [ACK] Seq=187 Ack=2345 Win=22656 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=187 Ack=2345 Win=22656 Len=0'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:46.048071'
  'Application Data'] ", color = Blue ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:46.048138'
- '53833  >  3128 [ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:46.773523'
- '53833  >  3128 [FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:46.814499'
- '3128  >  53833 [ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
    'b' ->  'a' [ diagonal, label = "  '2016-08-27 11:14:46.839250'
- '3128  >  53833 [FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
+ '[FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:46.839307'
- '[TCP Dup ACK 17#1] 53833  >  3128 [ACK] Seq=2346 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2346 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'a' ->  'b' [ diagonal, label = "  '2016-08-27 11:14:46.839320'
- '53833  >  3128 [ACK] Seq=2346 Ack=775 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2346 Ack=775 Win=16640 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.428855'
- '53833  >  3128 [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1'] ", color = Green ]; 
+ '[SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1'] ", color = Green ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.428887'
- '3128  >  53833 [SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128'] ", color = Green ]; 
+ '[SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.430863'
- '53833  >  3128 [ACK] Seq=1 Ack=1 Win=17408 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=1 Ack=1 Win=17408 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.433306'
  'CONNECT pagead2.googlesyndication.com:443 HTTP/1.0 '] ", color = Blue ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.433320'
- '3128  >  53833 [ACK] Seq=1 Ack=241 Win=15744 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=1 Ack=241 Win=15744 Len=0'] ", color = Green ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.436992'
  'HTTP/1.1 200 Connection established '] ", color = Blue ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.441079'
- '53833  >  3128 [ACK] Seq=241 Ack=40 Win=17408 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=241 Ack=40 Win=17408 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.446053'
  'Client Hello'] ", color = Blue ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.451389'
  'Server Hello Change Cipher Spec Hello Request Hello Request'] ", color = Blue ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.452926'
- '53833  >  3128 [ACK] Seq=471 Ack=187 Win=17152 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=471 Ack=187 Win=17152 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.453398'
  'Change Cipher Spec Hello Request Hello Request'] ", color = Blue ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.458437'
  '[TCP segment of a reassembled PDU]'] ", color = Blue ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.458458'
- '3128  >  53833 [ACK] Seq=187 Ack=1982 Win=19712 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=187 Ack=1982 Win=19712 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.458464'
  'Application Data'] ", color = Blue ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.498132'
- '3128  >  53833 [ACK] Seq=187 Ack=2345 Win=22656 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=187 Ack=2345 Win=22656 Len=0'] ", color = Green ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:06.977473'
  'Application Data'] ", color = Blue ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:06.983382'
- '53833  >  3128 [ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:07.708587'
- '53833  >  3128 [FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:07.748129'
- '3128  >  53833 [ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
    'c' ->  'b' [ diagonal, label = "  '2016-08-27 20:15:07.772897'
- '3128  >  53833 [FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
+ '[FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:07.773642'
- '[TCP Dup ACK 160#1] 53833  >  3128 [ACK] Seq=2346 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2346 Ack=774 Win=16640 Len=0'] ", color = Green ]; 
    'b' ->  'c' [ diagonal, label = "  '2016-08-27 20:15:07.773648'
- '53833  >  3128 [ACK] Seq=2346 Ack=775 Win=16640 Len=0'] ", color = Green ]; 
+ '[ACK] Seq=2346 Ack=775 Win=16640 Len=0'] ", color = Green ]; 
 }

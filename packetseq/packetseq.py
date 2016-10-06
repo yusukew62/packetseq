@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import argparse
 import os
 import subprocess
 import sys
@@ -15,6 +16,7 @@ class PacketSeq():
         self.seqdiag_list = list()
         self.color_dict = {"Default":"Blue", "URG":"Red", "ACK":"Green", 
             "PSH":"Red", "RST":"Red", "SYN":"Green", "FIN":"Green"}
+        self.seq_info = "default" 
 
     def set_direction(self):
         syn_pattern = re.compile('SYN')
@@ -64,6 +66,14 @@ class PacketSeq():
                     packet_info = ""
                     for info in range(6, len(packet)):
                         packet_info += packet[info]
+
+                    if self.seq_info == "summary":
+                        packet_info = re.sub('\'.*\[', '\'[', packet_info)
+                        packet_info = re.sub('\].*\'', ']\'', packet_info)
+                    elif self.seq_info == "info":
+                        packet_info = re.sub('\]$', '', packet_info)
+                    else:
+                        packet_info = re.sub('\'.*\[', '\'[', packet_info)
 
                     m = num_pattern.search(str(packet))
                     if not m:
