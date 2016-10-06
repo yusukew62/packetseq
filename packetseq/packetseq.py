@@ -9,14 +9,16 @@ import re
 
 class PacketSeq():
 
-    def __init__(self, files):
-        self.files = files
+    def __init__(self):
+        self.files = ""
+        self.type = ""
+        self.out = ""
         self.syn_list = list()
         self.packet_list = list()
         self.seqdiag_list = list()
         self.color_dict = {"Default":"Blue", "URG":"Red", "ACK":"Green", 
             "PSH":"Red", "RST":"Red", "SYN":"Green", "FIN":"Green"}
-        self.seq_info = "default" 
+        self.seq_info = "default"
 
     def set_direction(self):
         syn_pattern = re.compile('SYN')
@@ -81,9 +83,9 @@ class PacketSeq():
                         .format(packet[1], packet[2], packet[3], packet_info))
 
     def create_diag(self):
-        out_file = os.path.exists('out.diag')
+        out_file = os.path.exists(str(self.out) + '.diag')
         if out_file:
-            os.remove('out.diag')
+            os.remove(str(self.out) + '.diag')
 
         self.packet_list.sort()
         for i in self.packet_list:
@@ -98,7 +100,7 @@ class PacketSeq():
             self.seqdiag_list.append('  {} -> {} [ diagonal, label = " {}\n{} ", color = {} ]; '
             .format(packet[1], packet[2], packet[0], packet[3], color))
 
-        with open('out.diag', 'a') as fout:
+        with open(str(self.out) + '.diag', 'a') as fout:
             fout.write('{}\n'.format('seqdiag {'))
             fout.write('{}\n'.format(' edge_length = 600;'))
             fout.write('{}\n'.format(' span_height = 10;'))
@@ -109,12 +111,27 @@ class PacketSeq():
             fout.write('{}\n'.format('}'))
 
     def create_image(self):
-        diag_file = "out.diag"
-        subprocess.call(["seqdiag", diag_file])
+        diag_file = str(self.out) + '.diag'
+        cmd = "seqdiag"
+        subprocess.call([cmd, diag_file])
+
+    def set_parser(self):
+        parser = argparse.ArgumentParser(description="This script to make PNG image \
+            file of networking sequence diagram using csv file was made by pcap file.")
+        parser.add_argument('files', metavar="file", nargs="+")
+        parser.add_argument('-t', '--type', metavar="type", choices=['png','svg'],
+            nargs=1, default=['png'], help="choose 'png' or 'svg' output file format")
+        parser.add_argument('-o', '--out', metavar="out", nargs=1, default='out',
+            help="decide output file name")
+        args = parser.parse_args()
+        self.files = args.files
+        self.type = args.type[0]
+        self.out = args.out[0]
 
 
 def main():
-    packetseq = PacketSeq(sys.argv[1:])
+    packetseq = PacketSeq()
+    packetseq.set_parser()
     packetseq.set_direction()
     packetseq.set_name()
     packetseq.convert_name()
