@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import os
 import subprocess
 import sys
@@ -14,6 +13,8 @@ class PacketSeq():
         self.syn_list = list()
         self.packet_list = list()
         self.seqdiag_list = list()
+        self.color_dict = {"Default":"Blue", "URG":"Red", "ACK":"Green", 
+            "PSH":"Red", "RST":"Red", "SYN":"Green", "FIN":"Green"}
 
     def set_direction(self):
         syn_pattern = re.compile('SYN')
@@ -77,14 +78,21 @@ class PacketSeq():
         self.packet_list.sort()
         for i in self.packet_list:
             packet = i.split(",")
-            self.seqdiag_list.append('  {} -> {} [ diagonal, label = " {}\n{} " ]; '
-            .format(packet[1], packet[2], packet[0], packet[3]))
+            color = ""
+            for j in self.color_dict.keys():
+                if re.search(str(j),packet[3]):
+                    color = self.color_dict[j]
+                    break
+            else:
+                color = self.color_dict["Default"]
+            self.seqdiag_list.append('  {} -> {} [ diagonal, label = " {}\n{} ", color = {} ]; '
+            .format(packet[1], packet[2], packet[0], packet[3], color))
 
         with open('out.diag', 'a') as fout:
             fout.write('{}\n'.format('seqdiag {'))
-            fout.write('{}\n'.format(' edge_length = 800;'))
-            fout.write('{}\n'.format(' span_height = 20;'))
-            fout.write('{}\n'.format(' default_fontsize = 16;'))
+            fout.write('{}\n'.format(' edge_length = 600;'))
+            fout.write('{}\n'.format(' span_height = 10;'))
+            fout.write('{}\n'.format(' default_fontsize = 20;'))
             fout.write('{}\n'.format(' activation = none;'))
             for i in self.seqdiag_list:
                 fout.write('{}\n'.format(i))

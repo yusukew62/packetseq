@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: packetseq
+Version: 0.1.1
+Summary: Create packet sequence diagram from pcap format csv file
+Home-page: https://github.com/yusukew62/packetseq.git
+Author: Yusuke Watanabe
+Author-email: yusuke.w62@gmail.com
+License: MIT license
+Description: UNKNOWN
+Keywords: python seqdiag
+Platform: UNKNOWN
