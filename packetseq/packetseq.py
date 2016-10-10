@@ -134,7 +134,7 @@ class PacketSeq():
             subprocess.call(['seqdiag', '-Tsvg', diag_file])
 
     def set_parser(self):
-        parser = argparse.ArgumentParser(description="This script to make PNG image \
+        parser = argparse.ArgumentParser(version='0.1.4', description="This script to make PNG image \
             file of networking sequence diagram using csv file was made by pcap file.")
         parser.add_argument('files', metavar="file", nargs="+")
         parser.add_argument('-o', '--out', metavar="out", nargs=1, default=['out'],
