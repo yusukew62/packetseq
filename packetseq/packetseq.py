@@ -50,11 +50,11 @@ class PacketSeq():
 
             print('src ip:{} -> src name: ???'.format(syn["src_ip"]))
             sys.stdout.write('input src name > ')
-            syn["src"] = input()
+            syn["src"] = raw_input()
 
             print('dst ip:{} -> dst name: ???'.format(syn["dst_ip"]))
             sys.stdout.write('input dst name > ')
-            syn["dst"] = input()
+            syn["dst"] = raw_input()
             print('')
 
     def convert_node_name(self):
@@ -134,7 +134,7 @@ class PacketSeq():
             subprocess.call(['seqdiag', '-Tsvg', diag_file])
 
     def set_parser(self):
-        parser = argparse.ArgumentParser(version='0.1.4', description="This script to make PNG image \
+        parser = argparse.ArgumentParser(version='0.1.5', description="This script to make PNG image \
             file of networking sequence diagram using csv file was made by pcap file.")
         parser.add_argument('files', metavar="file", nargs="+")
         parser.add_argument('-o', '--out', metavar="out", nargs=1, default=['out'],
