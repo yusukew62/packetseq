@@ -1,6 +1,8 @@
 # packetseq
 Create packet sequence diagram from pcap format csv file
 
+[![Code Climate](https://codeclimate.com/repos/57ff5817e3bc270794005139/badges/1d9ff0fb1887c35cb28f/gpa.svg)](https://codeclimate.com/repos/57ff5817e3bc270794005139/feed)
+
 ## Description
 Create the image file of the packet sequence diagram based on the multiple packet captured files.
 Input files uses the csv files made from the pcap files.
