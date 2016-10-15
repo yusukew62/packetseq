@@ -1,0 +1,94 @@
+seqdiag {
+ edge_length = 600;
+ span_height = 10;
+ default_fontsize = 20;
+ activation = none;
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.493525
+[SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1 ", color = blue ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.496139
+[SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128 ", color = red ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.496273
+[ACK] Seq=1 Ack=1 Win=17408 Len=0 ", color = green ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.498497
+CONNECT pagead2.googlesyndication.com:443 HTTP/1.0  ", color = gray ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.500047
+[ACK] Seq=1 Ack=241 Win=15744 Len=0 ", color = green ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.506014
+HTTP/1.1 200 Connection established  ", color = gray ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.506099
+[ACK] Seq=241 Ack=40 Win=17408 Len=0 ", color = green ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.510321
+Client Hello ", color = gray ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.518012
+Server Hello Change Cipher Spec Hello Request Hello Request ", color = gray ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.518061
+[ACK] Seq=471 Ack=187 Win=17152 Len=0 ", color = green ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.518650
+Change Cipher Spec Hello Request Hello Request ", color = gray ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.523410
+[TCP segment of a reassembled PDU] ", color = gray ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:45.523418
+Application Data ", color = gray ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.526010
+[ACK] Seq=187 Ack=1982 Win=19712 Len=0 ", color = green ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:45.565129
+[ACK] Seq=187 Ack=2345 Win=22656 Len=0 ", color = green ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:46.048071
+Application Data ", color = gray ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:46.048138
+[ACK] Seq=2345 Ack=774 Win=16640 Len=0 ", color = green ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:46.773523
+[FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0 ", color = maroon ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:46.814499
+[ACK] Seq=774 Ack=2346 Win=22656 Len=0 ", color = green ]; 
+  b -> a [ diagonal, label = " 2016-08-27 11:14:46.839250
+[FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0 ", color = maroon ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:46.839307
+[ACK] Seq=2346 Ack=774 Win=16640 Len=0 ", color = green ]; 
+  a -> b [ diagonal, label = " 2016-08-27 11:14:46.839320
+[ACK] Seq=2346 Ack=775 Win=16640 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.428855
+[SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1 ", color = blue ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.428887
+[SYN ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128 ", color = red ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.430863
+[ACK] Seq=1 Ack=1 Win=17408 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.433306
+CONNECT pagead2.googlesyndication.com:443 HTTP/1.0  ", color = gray ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.433320
+[ACK] Seq=1 Ack=241 Win=15744 Len=0 ", color = green ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.436992
+HTTP/1.1 200 Connection established  ", color = gray ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.441079
+[ACK] Seq=241 Ack=40 Win=17408 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.446053
+Client Hello ", color = gray ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.451389
+Server Hello Change Cipher Spec Hello Request Hello Request ", color = gray ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.452926
+[ACK] Seq=471 Ack=187 Win=17152 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.453398
+Change Cipher Spec Hello Request Hello Request ", color = gray ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.458437
+[TCP segment of a reassembled PDU] ", color = gray ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.458458
+[ACK] Seq=187 Ack=1982 Win=19712 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.458464
+Application Data ", color = gray ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.498132
+[ACK] Seq=187 Ack=2345 Win=22656 Len=0 ", color = green ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:06.977473
+Application Data ", color = gray ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:06.983382
+[ACK] Seq=2345 Ack=774 Win=16640 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:07.708587
+[FIN ACK] Seq=2345 Ack=774 Win=16640 Len=0 ", color = maroon ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:07.748129
+[ACK] Seq=774 Ack=2346 Win=22656 Len=0 ", color = green ]; 
+  c -> b [ diagonal, label = " 2016-08-27 20:15:07.772897
+[FIN ACK] Seq=774 Ack=2346 Win=22656 Len=0 ", color = maroon ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:07.773642
+[ACK] Seq=2346 Ack=774 Win=16640 Len=0 ", color = green ]; 
+  b -> c [ diagonal, label = " 2016-08-27 20:15:07.773648
+[ACK] Seq=2346 Ack=775 Win=16640 Len=0 ", color = green ]; 
+}
