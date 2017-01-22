@@ -104,3 +104,4 @@ $ file out.*
 out.diag: ASCII text, with very long lines
 out.png:  PNG image data, 1856 x 31706, 8-bit/color RGBA, non-interlaced
 ```
+![output.png](https://raw.githubusercontent.com/wiki/yusukew62/packetseq/images/output.png)
