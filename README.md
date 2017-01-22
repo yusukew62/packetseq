@@ -52,15 +52,15 @@ tcp.port == "soure port number"
 
 #### 3. Save as a CSV file
 
-1. Select the following colum on the wireshark
+Select the following colum on the wireshark
 ```text
 "No.","Time","Source","Destination","Protocol","Length","Info"
 ```
-2. Select the 'Date and Time of Day' in the 'Time Display Format' from menu
+Select the 'Date and Time of Day' in the 'Time Display Format' from menu
 ```text
 1973-06-14 01:02:03.123456
 ```
-3. Save as a csv file on the wireshark  
+Save as a csv file on the wireshark  
 (e.g., file name are client.csv, proxy.csv)
 
 #### 4. Send csv files to the environment having the packetseq
@@ -72,7 +72,7 @@ $ packetseq client.csv proxy.csv
 
 #### 6. Enter the name of the other devices of communication from the standard input  
 
-1. Input the name  
+Input the name  
 (e.g., Windows 7 -> Client)
 ```text
 ########################################  
@@ -83,7 +83,7 @@ input src name > Client
 dst ip:192.168.1.62 -> dst name: ???  
 input dst name > Proxy  
 ```
-2. Input the name  
+Input the name  
 (e.g., Squid -> Proxy)
 ```text
 ########################################  
